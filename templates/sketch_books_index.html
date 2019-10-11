@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>SketchBooks</h1>
+
+    <a href='/sketchbooks/new'>New sketchbook</a>
+
+    {% for sketchbook in sketchbooks %}
+        <h2>{{ sketchbook.brand }}</h2>
+        <small>{{ sketchbook.size }}</small>
+        <small><img src = "{{ sketchbook.image }}" height ="150" width= "150"></small>
+    {% endfor %}
+{% endblock %}
